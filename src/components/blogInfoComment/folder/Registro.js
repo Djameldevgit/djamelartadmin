@@ -12,11 +12,7 @@ import {
 } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
 
-const IMAGENES_POR_METODO = {
-  google: ["/images/a.jpg", "/images/djamel1.jpg"],
-  facebook: ["/images/djamel0.jpg", "/images/djamel1.jpg"],
-  manual: ["/images/djamel0.jpg", "/images/djamel1.jpg"]
-};
+ 
 
 // ✅ CORREGIDO: Quité los paréntesis extraños
 const Registro = () => {
@@ -184,39 +180,9 @@ const Registro = () => {
                   </p>
                 </dd>
 
-                <dt className="col-sm-3">
-                  {t("usandoGoogle", { lng: lang })}
-                </dt>
-                <dd className="col-sm-9">
-                  <p>{t("descripcionGoogle", { lng: lang })}</p>
-                  <p className="mb-0">
-                    <span
-                      className="text-info d-inline-flex align-items-center cursor-pointer"
-                      onClick={() => handleVerImagenes("google")}
-                      style={{ cursor: "pointer" }}
-                    >
-                      <FaExternalLinkAlt className="me-1" />
-                      <span className="ms-1">{t("verImagenes", { lng: lang })}</span>
-                    </span>
-                  </p>
-                </dd>
+               
 
-                <dt className="col-sm-3">
-                  {t("usandoFacebook", { lng: lang })}
-                </dt>
-                <dd className="col-sm-9">
-                  <p>{t("descripcionFacebook", { lng: lang })}</p>
-                  <p className="mb-0">
-                    <span
-                      className="text-info d-inline-flex align-items-center cursor-pointer"
-                      onClick={() => handleVerImagenes("facebook")}
-                      style={{ cursor: "pointer" }}
-                    >
-                      <FaExternalLinkAlt className="me-1" />
-                      <span className="ms-1">{t("verImagenes", { lng: lang })}</span>
-                    </span>
-                  </p>
-                </dd>
+              
               </dl>
             </div>
 

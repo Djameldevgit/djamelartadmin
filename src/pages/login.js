@@ -4,9 +4,7 @@ import { login } from '../redux/actions/authAction'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
  
-import Loginfacegoogle from '../auth/Loginfacegoogle'
-//import Loginfacegoogle from '../auth/Loginfacegoogle'
-
+ 
 const Login = () => {
     const initialState = { email: '', password: '' }
     const [userData, setUserData] = useState(initialState)
@@ -39,9 +37,7 @@ const Login = () => {
 
             <form onSubmit={handleSubmit}>
                 <h3 className="text-uppercase text-center mb-4">{t('namelogin', { lng: lang })}</h3>
-                <div className="form-group">
-                    <Loginfacegoogle />
-                </div>
+               
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">{t('emailAddress', { lng: lang })}</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" name="email"

@@ -39,7 +39,7 @@ import { TalleSelect } from './categorias/Talle';
 import { Negociarprecio } from './categorias/Negociable';
 import { VenteOptionsSelect } from './categorias/OptionDeVente';
 import { ItemsSubCategoryPeinture } from './categorias/Peinture';
-import { Paises } from './categorias/Pais';
+ 
 import { WilayaCommune } from './StatusModalComponents';
 
 import { useTranslation } from 'react-i18next';
@@ -464,13 +464,7 @@ const StatusModal = () => {
         }));
     };
 
-    const paisess = () => (
-        <Paises
-            handleChangeInput={handleChangeInput} postData={postData}
-
-        />
-    )
-
+  
     const wilayascommunes = () => (
         <WilayaCommune
             postData={postData}
@@ -653,9 +647,7 @@ const StatusModal = () => {
                         {wilayascommunes()}
                     </div>
 
-                    <div >
-                        {paisess()}
-                    </div>
+                    
                     <div >
                         {ciudadInput()}
                     </div>

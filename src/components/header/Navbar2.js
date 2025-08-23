@@ -7,10 +7,8 @@ import { Link, useHistory } from 'react-router-dom'
 import Avatar from '../Avatar'
 import Card from 'react-bootstrap/Card'
 import { FaBars, FaSignOutAlt, FaUserCircle, FaSignInAlt, FaUserPlus } from 'react-icons/fa'
-import { Navbar, Container, NavDropdown, Offcanvas, Button, Badge } from 'react-bootstrap'
-import { BsCartFill } from 'react-icons/bs'
-import NotifyModal from '../NotifyModal'
-
+import { Navbar, Container, NavDropdown, Offcanvas, Button } from 'react-bootstrap'
+ 
 
 import LanguageSelectorpc from '../LanguageSelectorpc'
 
@@ -20,19 +18,19 @@ import ActivateButton from '../../auth/ActivateButton'
 
 
 import VerifyModal from '../authAndVerify/VerifyModal';
-import Acordion from '../Acordion';
+ 
 import Modalsearchhome from './Modalsearchhome';
 import DesactivateModal from '../authAndVerify/DesactivateModal';
-
+import NotifyModal from '../NotifyModal';
+ 
 const Navbar2 = ({ onFiltersChange }) => {
-  const { auth, theme, cart, notify } = useSelector((state) => state)
+  const { auth, theme,  notify } = useSelector((state) => state)
   const dispatch = useDispatch()
   const { languageReducer } = useSelector(state => state)
   const { t } = useTranslation(['searchhome'])
   const lang = languageReducer.language || 'en'
   const [showDrawer, setShowDrawer] = useState(false)
-  const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
-  const totalItems = cart.items?.reduce((acc, item) => acc + item.quantity, 0) || 0;
+  const [showAdvancedSearch, setShowAdvancedSearch] = useState(false); 
   const [showModal, setShowModal] = useState(false);
   const [showVerifyModal, setShowVerifyModal] = useState(false);
   const [showDeactivatedModal, setShowDeactivatedModal] = useState(false);
@@ -46,7 +44,7 @@ const Navbar2 = ({ onFiltersChange }) => {
   const handleCloseDrawer = () => setShowDrawer(false)
   const handleShowDrawer = () => setShowDrawer(true)
 
-  const [showUserMenu, setShowUserMenu] = useState(false);
+ 
   const wasOpenRef = useRef(false);
   const [menuVersion, setMenuVersion] = useState(0);
   const history = useHistory();
@@ -135,7 +133,7 @@ const Navbar2 = ({ onFiltersChange }) => {
 
   return (
     <div>
-      <Navbar expand="lg" className="navbar bg-body-tertiary mb-2 shadow-sm px-3">
+      <Navbar expand="lg" className="navbar bg-info mb-2 shadow-sm px-3">
         <Container fluid className="align-items-center justify-content-between">
           <div className="d-flex align-items-center">
             <Button onClick={handleShowDrawer} variant="outline-primary" className="me-2">
@@ -162,10 +160,7 @@ const Navbar2 = ({ onFiltersChange }) => {
               title={t('navbar:search')}
               style={{ cursor: 'pointer' }}
             />
-            {auth.user &&
-              <i className='fas fa-plus' onClick={openStatusModal}> </i>
-
-            }
+           
 
 
             {auth.user && (
@@ -186,7 +181,7 @@ const Navbar2 = ({ onFiltersChange }) => {
 
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown"
                   style={{ transform: 'translateX(75px)' }}>
-                  <NotifyModal />
+                  <NotifyModal/>
                 </div>
 
               </div>
@@ -194,16 +189,7 @@ const Navbar2 = ({ onFiltersChange }) => {
 
             )}
 
-            {auth.user && (
-              <Link to="/cart/cartcarrito" className="position-relative text-decoration-none">
-                <BsCartFill size={20} className="text-dark" />
-                {totalItems > 0 && (
-                  <Badge pill bg="danger" className="position-absolute top-0 start-100 translate-middle" style={{ fontSize: '0.6rem' }}>
-                    {cart.items?.length || 0}
-                  </Badge>
-                )}
-              </Link>
-            )}
+           
 
             <NavDropdown
               align="end"
@@ -282,9 +268,7 @@ const Navbar2 = ({ onFiltersChange }) => {
                         <NavDropdown.Item as={Link} to="/users/bloqueos">
                           {t('navbar:blockedUsers')}
                         </NavDropdown.Item>
-                        <NavDropdown.Item as={Link} to="/cart/orderss">
-                          {t('navbar:orders')}
-                        </NavDropdown.Item>
+                        
                       </>
                     )}
 
@@ -354,7 +338,7 @@ const Navbar2 = ({ onFiltersChange }) => {
             )}
           </div>
           <ActivateButton />
-          <Acordion />
+         
         </Offcanvas.Body>
       </Offcanvas>
 

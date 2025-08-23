@@ -29,15 +29,8 @@ import Postspendientes from './pages/postspendientes'
 import LanguageSelectorandroid from './components/LanguageSelectorandroid'
 import Roles from './pages/roles';
 
-
-import { getCart } from './redux/actions/cartAction';
-
-import Cart from './pages/carte/cart';
-import Chekoutt from './pages/carte/Chekoutt';
-
-
-import Orderss from './pages/carte/orderss';
-import { getOrders } from './redux/actions/orderAction';
+ 
+ 
 import ForgotPassword from './auth/ForgotPassword';
 import ResetPassword from './auth/ResetPassword';
 
@@ -113,16 +106,15 @@ function App() {
       localStorage.setItem('language', language); // ✅ persistencia
     }
   }, [language]);
-  // Efecto para manejar el idioma y dirección del texto
-
+  
 
 
   useEffect(() => {
 
     dispatch(getPosts())//EHECUTAR LAS ACCIONES GETUSER Y GETUSERSACTION EN SUS PROPIOS COMPONENTE
     if (auth.token) {
-      dispatch(getCart((auth.token)))
-      dispatch(getOrders((auth.token)))
+     
+ 
       dispatch(getUsers(auth.token))
 
 
@@ -199,8 +191,7 @@ function App() {
             <Route exact path="/contact" component={auth.token ? Contactt : Login} />
 
             <Route exact path="/users/adminsendemail" component={auth.token ? AdminSendEmails : Login} />
-            <Route exact path="/cart/chekout" component={auth.token ? Chekoutt : Login} />
-            <Route exact path="/cart/cartcarrito" component={auth.token ? Cart : Login} />
+           
 
             <Route exact path="/rolesuser" component={auth.token ? Roles : Login} />
             <Route exact path="/users/userss" component={auth.token ? Userss : Login} />
@@ -215,7 +206,7 @@ function App() {
      
             <Route exact path="/infoaplicacion" component={InfoAplicacion} />
 
-            <Route exact path="/orderss" component={auth.token ? Orderss : Login} />
+     
             <Route exact path="/usersblock" component={auth.token ? Usersblock : Login} />
 
             <Route exact path="/forgot_password" component={ForgotPassword} />
