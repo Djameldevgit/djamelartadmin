@@ -1,0 +1,67 @@
+{
+  "CARTCARRRITO": "CARTCARRRITO",
+  "yourShoppingCart": "Votre panier",
+  "yourCartIsEmpty": "Votre panier est vide",
+  "pleaseLoginToViewCart": "Veuillez vous connecter pour voir votre panier",
+  "login": "Connexion",
+  "loadingYourCart": "Chargement de votre panier...",
+  "continueShopping": "Continuer vos achats",
+  "unnamedProduct": "Produit sans nom",
+  "unitPrice": "Prix unitaire",
+  "quantity": "Quantité",
+  "subtotal": "Sous-total",
+  "remove": "Supprimer",
+  "totalProducts": "Total des produits",
+  "proceedToCheckout": "Passer à la caisse",
+  "productRemovedSuccessfully": "Produit supprimé avec succès",
+  "removalError": "Erreur de suppression",
+  "invalidProductId": "ID de produit invalide",
+
+  "CHEKOUT": "PAIEMENT",
+  "paymentForm": "Formulaire de paiement",
+  "orderSummary": "🧾 Récapitulatif de la commande",
+  "artwork": "Œuvre d'art",
+  "noTitle": "Sans titre",
+  "total": "Total",
+  "totalToPay": "Total à payer",
+  "paymentInfoTitle": "📌 Informations avant paiement",
+  "countrySelectionGuide": "Veuillez sélectionner votre <strong>pays de résidence</strong> pour continuer. Selon votre localisation, nous afficherons les options de paiement disponibles.",
+  "selectCountryLabel": "🌍 Sélectionnez votre pays :",
+  "algeriaPostTitleeeeeeeee": "📬 Informations CCP - Poste Algérie",
+  "account": "Compte postal",
+  "key": "Clé",
+  "documents": "Documents",
+  "algeriaDocuments": "CNI, résidence, CH1, signature CH25",
+  "dailyLimits": "Limites quotidiennes",
+  "algeriaLimits": "200000 DZD ; Rapide : 30000 DZD",
+  "inquiries": "Demandes",
+  "algeriaInquiries": "En personne, e‑CCP, SMS (603), téléphone (15‑30)",
+  "bankInfoTitle": "🏦 Informations bancaires - SWIFT",
+  "name": "Nom",
+  "bank": "Banque",
+  "paymentNotice": "📸 Après avoir effectué le paiement, envoyez le reçu (photo ou capture) par e-mail ou WhatsApp pour traiter votre commande.",
+  "whereToSend": "📤 Où envoyer le reçu ?",
+  "email": "E-mail",
+
+
+
+
+
+
+
+  "algeriaPostTitle": "Paiement par CCP (Algérie)",
+  "accountNumberCCP": "Numéro de compte CCP",
+  "ccpKey": "Clé CCP",
+  "ccpInstruction1": "1. Présentez ce numéro dans n'importe quel bureau postal en Algérie",
+  "ccpInstruction2": "2. Le paiement peut prendre 24-48 heures à être traité",
+  "internationalBankTitle": "Virement Bancaire International",
+  "internationalNotice1": "Les virements internationaux peuvent prendre 3-5 jours ouvrés.",
+  "internationalNotice2": "Veuillez inclure le numéro de commande comme référence."
+
+
+
+
+
+
+
+}
