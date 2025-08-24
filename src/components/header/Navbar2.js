@@ -212,9 +212,7 @@ const Navbar2 = ({ onFiltersChange }) => {
                   <>
                     <NavDropdown.Header> <span className='text-success'><i className='fas fa-user mr-1' ></i> </span> <span > <strong>{auth.user.username}</strong> </span> </NavDropdown.Header>
 
-                    <NavDropdown.Item onClick={openStatusModal}>
-                      ➕ {t('navbar:addPost')}
-                    </NavDropdown.Item>
+                    
 
                     <NavDropdown.Item as={Link} to="/contact">
                       📩 {t('navbar:contact')}

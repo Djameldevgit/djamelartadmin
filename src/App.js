@@ -8,7 +8,7 @@ import Register from './pages/register'
 
 import Alert from './components/alert/Alert'
 
-import StatusModal from './components/StatusModal'
+ 
 
 import { useSelector, useDispatch } from 'react-redux'
 import { refreshToken } from './redux/actions/authAction'
@@ -162,8 +162,7 @@ function App() {
         <LanguageSelectorandroid />
         <div className="main">
           <Navbar2 onFiltersChange={setFilters} />
-
-          {status && <StatusModal />}
+ 
           {auth.token && <SocketClient />}
           <Switch>
 
